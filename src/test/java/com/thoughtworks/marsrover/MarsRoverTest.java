@@ -19,4 +19,16 @@ public class MarsRoverTest {
         assertEquals(0, marsRover.coordinate.x);
         assertEquals(0, marsRover.coordinate.y);
     }
+
+    @Test
+    public void return_East_give_East() {
+        // given
+        MarsRover marsRover = new MarsRover();
+
+        // When
+        marsRover.direction = Direction.E;
+
+        // Then
+        assertEquals(Direction.E, marsRover.direction);
+    }
 }
