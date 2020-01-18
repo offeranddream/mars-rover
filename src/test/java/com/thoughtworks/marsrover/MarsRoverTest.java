@@ -31,4 +31,18 @@ public class MarsRoverTest {
         // Then
         assertEquals(Direction.E, marsRover.direction);
     }
+
+    @Test
+    public void return_1_0_E_give_0_0_East() {
+        MarsRover marsRover = new MarsRover();
+        Coordinate nextCoordinate = new Coordinate(1, 0);
+
+        marsRover.coordinate = new Coordinate(0, 0);
+        marsRover.direction = Direction.E;
+        marsRover.forward();
+
+        // Then
+        assertEquals(Direction.E, marsRover.direction);
+        assertEquals(true, nextCoordinate.equals(marsRover.coordinate));
+    }
 }
