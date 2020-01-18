@@ -4,6 +4,7 @@ package com.thoughtworks.marsrover;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MarsRoverTest {
 
@@ -43,6 +44,6 @@ public class MarsRoverTest {
 
         // Then
         assertEquals(Direction.E, marsRover.direction);
-        assertEquals(true, nextCoordinate.equals(marsRover.coordinate));
+        assertTrue(nextCoordinate.equals(marsRover.coordinate));
     }
 }
